@@ -8,6 +8,7 @@ box-sizing: border-box;
 
 * {
 margin: 0;
+padding: 0;
 }
 
 html, body {
@@ -62,49 +63,32 @@ li {
 
 
 /* -------- Header ----------------- */
-
-.logo {  
-  width: min(50px, 15%);
-  position: absolute;
-  left: min(1%, 10px);
-  top: min(3%, 10px);
-}
-
-.logo img {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-}
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5%;
-  padding: 1rem;
-  padding-right: 2%;
+  padding: 2%;
 }
 
+.logo {  
+  width: min(50px, 15%);
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
 
-header ul {
-  position: absolute;
+.nav-links {
   background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3%;
-  height: 0;
   transition: 0.3s;
 }
-
-header ul .open {
-  height: auto;
-  transition: 0.3s;
-}
-
-
 
 /* ----------- Burger button ---------  */
 
+/* 
 .dropmenu {
   display: flex;
   justify-content: end;
@@ -118,7 +102,7 @@ header ul .open {
 .dropmenu-burger {
   width: 30px;
   height: 3px;
-  /* margin-right: min(25px, 4vw); */
+  margin-right: min(25px, 4vw);
   background: white;
   border-radius: 3px;
   transition: all 0.5s ease-in-out;
@@ -146,7 +130,7 @@ header ul .open {
 
 /* Animation */
 
-.dropmenu.open .dropmenu-burger {
+/* .dropmenu.open .dropmenu-burger {
   transform: translateX(-50px);
   background: transparent;
   box-shadow: none;
@@ -158,7 +142,7 @@ header ul .open {
 
 .dropmenu.open .dropmenu-burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
-}
+} */
 
 
 
@@ -217,33 +201,18 @@ h1 {
   /*  ---------  Nav bar to full --------------- */
 
   header {
-    margin-left: auto;
-    justify-content: flex-end;
-    gap: 5%;
     padding: 1rem;
     padding-right: 2%;
   }
 
-  header nav {
+  .top-menu {
+    display: block;
     width: 80%;
   }
   
-  header li {
-    display: inline-block;
-  }
-  
-  header ul {
-    position: static;
-    display: flex;
+  .nav-links {
     flex-direction: row;
     justify-content: flex-end;
-    gap: 3%;
-    height: auto;
-  }
-
-  .dropmenu {
-    position: absolute;
-    display: none;
   }
 
 }

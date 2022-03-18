@@ -1,6 +1,11 @@
-const menuBtn = document.querySelector(".dropmenu"),
-  navmenu = document.querySelector(".menu");
-menuBtn.addEventListener("click", () => {
+const menuBtn = document.querySelector(".logo"),
+  navMenu = document.querySelector(".top-menu"),
+  dropLinks = document.querySelectorAll(".menu-link");
+  
+menuBtn.addEventListener("click", toggleNav);
+dropLinks.forEach(element => element.addEventListener('click', toggleNav));
+
+function toggleNav() {
     menuBtn.classList.toggle("open");
-    navmenu.classList.toggle("open");
-  } );
+    navMenu.classList.toggle("open");
+  };
