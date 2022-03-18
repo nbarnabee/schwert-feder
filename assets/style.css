@@ -1,0 +1,191 @@
+/* Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*, *::before, *::after {
+box-sizing: border-box;
+}
+
+* {
+margin: 0;
+}
+
+html, body {
+height: 100%;
+}
+
+img, picture, video, canvas, svg {
+display: block;
+max-width: 100%;
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+overflow-wrap: break-word;
+}
+
+#root, #__next {
+isolation: isolate;
+}
+
+
+/* ----------Base styles ---------  */
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: black;
+  color: white;
+  scroll-behavior: smooth;
+  }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+li {
+	list-style: none;
+}
+
+.button {
+  padding: 0.33em 1em;
+  border: 2px solid white;
+  border-radius: 100px;
+}
+
+
+
+
+/* -------- Header ----------------- */
+
+.logo {  
+  width: min(50px, 15%);
+  position: absolute;
+  left: min(1%, 10px);
+  top: min(3%, 10px);
+}
+
+.logo img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+header {
+  display: flex;
+  margin-left: 20%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  padding: 1rem;
+  padding-right: 2%;
+}
+
+
+header ul {
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
+  height: 0;
+  transition: 0.3s;
+}
+
+header ul .open {
+  height: auto;
+  transition: 0.3s;
+}
+
+
+
+
+
+
+
+/* -------- Main ----------------- */
+
+main {
+  background: url("./images/dice2.webp") top 20% left 30% no-repeat;
+  padding-block: min(5%, 3rem);
+  border-block: 5px solid white;
+}
+
+h1 {
+  padding: min(5%, 1rem);
+  border-radius: 10px;
+  width: min(500px, 80%);
+  margin: 0 auto;
+}
+
+
+.card {
+  background-color: var(--color-light);
+  width: min(90%, 300px);
+  margin: 20px auto;
+  padding: min(4vw, 15px);
+  border: 1px solid var(--color-dark);
+  box-shadow: 0 2px 5px rgba(19, 18, 18, 0.2);
+}
+
+.card > * {
+  margin-inline: auto;
+}
+
+.card * + * {
+  margin-top: 10px;
+  text-align: center;
+  width: 95%;
+}
+
+.card > img {
+  display: block;
+  max-width: 100%;
+  width: 80%;
+}
+
+
+
+/* ------- Media Queries ---------- */
+
+@media all and (min-width: 550px) {
+
+
+  /*  ---------  Nav bar to full --------------- */
+
+  header {
+    margin-left: auto;
+    justify-content: flex-end;
+    gap: 5%;
+    padding: 1rem;
+    padding-right: 2%;
+  }
+
+  header nav {
+    width: 80%;
+  }
+  
+  header li {
+    display: inline-block;
+  }
+  
+  header ul {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3%;
+    height: auto;
+  }
+
+  .dropmenu {
+    position: absolute;
+    display: none;
+  }
+
+}
