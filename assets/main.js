@@ -1,5 +1,5 @@
 const menuBtn = document.querySelector(".logo"),
-  navMenu = document.querySelector(".top-menu"),
+  navMenu = document.querySelector(".main-menu"),
   dropLinks = document.querySelectorAll(".menu-link");
   
 menuBtn.addEventListener("click", toggleNav);
