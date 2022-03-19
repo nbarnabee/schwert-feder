@@ -14,7 +14,6 @@
   <header>
     <a href="./index.html"><img class="logo" src="./images/logos/logo_sf_textless_fill.svg"
         alt="Schwert & Feder Home"></a>
-
     <nav aria-label="top-nav" class="top-nav">
       <ul class="nav-links">
         <li class="menu-link"><a href="#">Unsere Club</a></li>
@@ -24,14 +23,17 @@
         <li class="menu-link"><a href="#">Kontakt</a></li>
       </ul>
     </nav>
-
     <a href="#" class="button">Login</a>
-
   </header>
+
+  <!-- The banner section.  "Main" is perhaps not the best tag for this part, so I might change it later.  Will need to take care to update some CSS rules if I do. -->
 
   <main>
     <h1><img src="./images/logos/logo_10.png" alt="Schwert & Feder Spielclub Düdingen"></h1>
   </main>
+
+
+  <!-- The "latest news" section.  Adding more news items will be as easy as copy/pasting the sections below and doing the same with the CSS bits.  Ultimately I'd like to put these into a slider. -->
 
   <section class="latest" aria-labelledby="letztens">
     <h2 id="letztens">Letztens</h2>
@@ -68,6 +70,16 @@
     </div>
   </section>
 
+
+  <section class="spaced" aria-labelledby="about">
+    <h2 id="about">Unser Club</h2>
+    <p></p>
+
+  </section>
+
+
+  <!--- The navigation menu for mobile devices.  This will only appear on screen widths < 600px:  see the Media Queries/Swap Nav bars section in style.css -->
+
   <nav aria-label="mobile-nav" class="mobile-nav">
     <ul class="nav-links">
       <li class="menu-link"><a href="#">News</a></li>
@@ -77,8 +89,10 @@
     </ul>
   </nav>
 
-  <footer>
+  <!--- The footer.  It is very basic. -->
 
+  <footer class="spaced">
+    <small> &#64;2022, Schwert & Feder. Alle Rechte vorbehalten.</small>
   </footer>
 
 
