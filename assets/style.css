@@ -130,7 +130,7 @@ li {
 }
 
 .button {
-  padding: 0.33em 1em;
+  padding: 0.25em 0.75em;
   border: 2px solid white;
   border-radius: 100px;
   transition: 0.3s;
