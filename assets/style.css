@@ -231,43 +231,50 @@ h1 {
 
 
 .card {
-  padding: min(4vw, 15px);
+  /* padding: min(4vw, 15px); */
+  max-height: 250px;
   border: 1px solid white;
+  aspect-ratio: 1.91 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__txt {
-  margin: auto;
-  padding-left: 5%;
-  margin-top: min(20px, 5%);
   text-align: center;
   max-width: 60ch;
 }
 
-.card__txt p {
-  margin-top: 10px;
-  margin-inline: auto;
-  width: 100%;
-  text-align: left;
-}
-
-.card__img {
-  border: 1px solid white;
-  flex-shrink: 0;
-}
 
 .container {
   width: 90%;
   margin-inline: auto;
   margin-top: var(--s1);
   display: grid;
-  grid-gap: min(2vw, 2rem);
+  grid-gap: min(1vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
 }
-  
-  @supports (width: min(250px, 100%)) {
-    .grid {
-      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    }
+
+  /* -------- News stories --- */
+
+
+  .hurloon {
+    background: url("../images/thumbnails/hurloon_thumb.jpg") center/contain no-repeat;
   }
+
+  .suft21_kinder {
+    background: url("../images/thumbnails/suft21_kinder.jpg") center/contain no-repeat;
+  }
+
+  .suft21_draft {
+    background: url("../images/thumbnails/suft21_draft.jpg") center/contain no-repeat;
+  }
+
+  .magic_turnier {
+    background: url("../images/thumbnails/magic_turnier.jpg") center/contain no-repeat;
+  }
+
+
 
 
 
@@ -309,33 +316,10 @@ h1 {
     width: min(500px, 80%);
     margin: 3% auto auto 10%;
   }
+  
 
 }
 
-
-
-@media all and (min-width: 800px) {
-
-    /* -- Cards can actually be wide -- */
-
-  .card {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 80%;
-    margin: auto;
-  }
-
-  .card__txt {
-    text-align: left;
-  }
-
-  .card__img {
-    width: 50%;
-    max-width: 100%;
-  }
-
-}
 
 
 /* Full backup of nav bar settings since I keep fucking up 
