@@ -213,18 +213,18 @@ header {
 /* -------- Main ----------------- */
 
 main {
-  margin-top: 4%;
-  background: url("../images/dice_small.webp") center/125% no-repeat;
-  padding-block: min(5%, 3rem);
+  margin-top: 6%;
+  /* background: url("../images/dice_small.webp") center/125% no-repeat; */
+  /* padding-block: min(5%, 3rem); */
   border-bottom: 2px solid white;
 }
 
 
 h1 {
-  padding: min(5%, 1rem);
-  border-radius: 10px;
-  width: min(500px, 80%);
-  margin: 12% auto 3%;
+  /* padding: min(5%, 1rem); */
+  /* border-radius: 10px; */
+  /* width: min(500px, 80%); */
+  margin: 15% auto 3%;
 }
 
 
@@ -310,15 +310,16 @@ h1 {
 /* --- Changing h1 position & img -- */
 
 
-  main {
-    background: url("../images/dice_lrg.webp") top 20% left 30% no-repeat;
-  }
+  /* main {
+     background: url("../images/dice_lrg.webp") top 20% left 30% no-repeat; 
+  } */
 
   h1 {
-    padding: min(5%, 2rem);
+    /* padding: min(5%, 2rem);
     border-radius: 10px;
-    width: min(500px, 80%);
-    margin: 3% auto auto 10%;
+    width: min(500px, 80%); */
+    /* margin: 3% auto auto 10%; */
+    margin: auto;
   }
   
 

@@ -1,0 +1,1 @@
+alert(`Once upon a time I had an image behind "Schwert & Feder Spielclub" but decided I didn't like it at all.  Will do something different in that space.`);
