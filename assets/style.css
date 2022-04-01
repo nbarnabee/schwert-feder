@@ -12,53 +12,136 @@ and
 -----------------------------------------------------  */
 
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -68,20 +151,33 @@ body {
   scroll-behavior: smooth;
 }
 
-img, picture, video, canvas {
+img,
+picture,
+video,
+canvas {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
@@ -97,7 +193,7 @@ a {
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 
@@ -122,11 +218,11 @@ body {
   line-height: var(--ratio);
   background-color: black;
   color: white;
-  }
+}
 
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 .button {
@@ -180,7 +276,7 @@ header {
   padding: 2%;
 }
 
-.logo {  
+.logo {
   width: 50px;
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
 }
@@ -198,13 +294,13 @@ header {
 }
 
 .menu-link::after {
- content: "";
- display: block;
- height: 2px;
- position: absolute;
- width: 0;
- background-color: white;
- transition: 0.3s;
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 0;
+  background-color: white;
+  transition: 0.3s;
 }
 
 .menu-link:hover::after {
@@ -246,6 +342,14 @@ h1 {
   background-color: rgba(0, 0, 0, 0.6)
 }
 
+/* --- Here's where I experiment with a carousel vs a grid container --  */
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+}
+
+/*
 .container {
   width: 90%;
   margin-inline: auto;
@@ -254,27 +358,28 @@ h1 {
   grid-gap: min(1vw, 2rem);
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
 }
+*/
 
 
-  /* -------- News stories ---- */
-  /* Adding to the list of news stories is as easy as copy/pasting one of these entries and plugging in a new thumbnail.  Images should be cropped to a standard landscape ratio of 1.91:1.  Easy to do in Gimp or another image editing program! */
+/* -------- News stories ---- */
+/* Adding to the list of news stories is as easy as copy/pasting one of these entries and plugging in a new thumbnail.  Images should be cropped to a standard landscape ratio of 1.91:1.  Easy to do in Gimp or another image editing program! */
 
 
-  .hurloon {
-    background: url("../images/thumbnails/hurloon_thumb.jpg") center/contain no-repeat;
-  }
+.hurloon {
+  background: url("../images/thumbnails/hurloon_thumb.jpg") center/contain no-repeat;
+}
 
-  .suft21_kinder {
-    background: url("../images/thumbnails/suft21_kinder.jpg") center/contain no-repeat;
-  }
+.suft21_kinder {
+  background: url("../images/thumbnails/suft21_kinder.jpg") center/contain no-repeat;
+}
 
-  .suft21_draft {
-    background: url("../images/thumbnails/suft21_draft.jpg") center/contain no-repeat;
-  }
+.suft21_draft {
+  background: url("../images/thumbnails/suft21_draft.jpg") center/contain no-repeat;
+}
 
-  .magic_turnier {
-    background: url("../images/thumbnails/magic_turnier.jpg") center/contain no-repeat;
-  }
+.magic_turnier {
+  background: url("../images/thumbnails/magic_turnier.jpg") center/contain no-repeat;
+}
 
 
 
@@ -296,7 +401,7 @@ footer {
 @media all and (min-width: 600px) {
 
 
-/*  ----- Remove the mobile-only nav bar and instate the upper bar -------- */
+  /*  ----- Remove the mobile-only nav bar and instate the upper bar -------- */
 
   header {
     padding: 1rem;
@@ -316,13 +421,13 @@ footer {
     display: none;
   }
 
-/* --- Offset h1  */
+  /* --- Offset h1  */
 
   h1 {
     margin: auto;
   }
-  
-/* --- Remove footer spacing ---*/
+
+  /* --- Remove footer spacing ---*/
 
   footer {
     margin-bottom: 0;
