@@ -27,7 +27,7 @@
 
   <!-- The banner section.  "Main" is perhaps not the best tag for this part, so I might change it later.  Will need to take care to update some CSS rules if I do. -->
 
-  <section class="intro">
+  <main class="intro">
     <div class="intro__text">
       <div>
         <img src="./images/logos/logo_sf_textless_white.png" alt="Schwert & Feder logo">
@@ -48,15 +48,15 @@
       <button type="button">Unsere Club</button>
       <button type="button">Was ist Rollenspiele?</button>
     </div>
-  </section>
+  </main>
 
 
   <!-- The "latest news" section.  Adding more news items will be as easy as copy/pasting the sections below and doing the same with the CSS bits.  Ultimately I'd like to put these into a slider. -->
 
   <section class="latest" aria-labelledby="letztens">
-    <h4 id="letztens">Letztens</h4>
+    <h4 id="letztens" class="label">Letztens</h4>
 
-    <div class="container carousel">
+    <div class="container">
 
       <section class="card hurloon">
         <div class="card__txt">
@@ -89,8 +89,8 @@
   </section>
 
 
-  <section class="spaced" aria-labelledby="about">
-    <h4 id="about">Unser Club</h4>
+  <section aria-labelledby="about">
+    <h4 id="about" class="label">Unser Club</h4>
     <p>Der Verein Schwert & Feder, Spielclub Düdingen ist, wie der Name schon sagt, ein Spielclub.</p>
 
     <p>Wir haben dabei den Begriff "Spiele" grosszügig definiert. Es ist ein Anliegen des Clubs das "kreative Spiel" zu

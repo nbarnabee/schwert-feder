@@ -246,7 +246,8 @@ h2 {
   font-size: 2.8rem;
 }
 
-h3 {
+h3,
+h4 {
   font-size: 1.5rem;
 }
 
@@ -313,8 +314,7 @@ h1 {
 /* This is just the design for the card items themselves.  To add new items, copy/paste the relevant bits on index.html and add a new entry in the next section. */
 
 .card {
-  max-height: 250px;
-  border: 1px solid white;
+  /* max-height: 250px; */
   aspect-ratio: 1.91 / 1;
   display: flex;
   justify-content: center;
@@ -332,12 +332,10 @@ h1 {
 .container {
   width: 90%;
   margin-inline: auto;
-  margin-top: var(--s1);
-  display: grid;
-  grid-gap: min(1vw, 2rem);
-  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
 
 /* -------- News stories ---- */
 /* Adding to the list of news stories is as easy as copy/pasting one of these entries and plugging in a new thumbnail.  Images should be cropped to a standard landscape ratio of 1.91:1.  Easy to do in Gimp or another image editing program! */
@@ -360,6 +358,16 @@ h1 {
 }
 
 
+/* ------  other sections (general) --------- */
+
+body>section {
+  margin-block: 10%;
+}
+
+.label {
+  margin-left: 5%;
+}
+
 
 
 /* ---- Footer ----*/
@@ -374,7 +382,31 @@ footer {
 /* ------- Media Queries ---------- */
 
 
-@media all and (min-width: 760px) {
+
+@media all and (min-width: 770px) {
+
+
+
+  /* ------ fonts for big screens ------- */
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p,
+  a,
+  button {
+    font-size: 1.2rem;
+  }
+
+  .intro p {
+    font-size: 1.5rem;
+  }
+
 
 
   header {
@@ -383,7 +415,6 @@ footer {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #cdcaca;
     background-color: #1c1a1a;
     display: flex;
     justify-content: space-between;
@@ -441,7 +472,6 @@ footer {
 
   .intro p {
     display: block;
-    font-size: 1.2rem;
     padding-bottom: 10px;
   }
 
@@ -451,7 +481,7 @@ footer {
 
   .intro {
     margin: auto;
-    margin-block: 5%;
+    margin-block: 3%;
   }
 
   .intro__text {
@@ -474,6 +504,18 @@ footer {
     margin: auto;
     display: flex;
     gap: 2rem;
+  }
+
+
+  /* -----  Adjust news containers -----  */
+
+  .container {
+    width: 90%;
+    margin-inline: auto;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-gap: min(1vw, 2rem);
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
   }
 
 
