@@ -196,129 +196,116 @@ li {
   list-style: none;
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
+
+/* -----  Root ----------  */
+
+
+/* ------  Fonts ----------- */
+
+@font-face {
+  font-family: 'goudy';
+  src: url("./fonts/GoudyOldStyle/goudy_oldstyle-webfont.woff2") format('woff2'),
+    url('./fonts/GoudyOldStyle/goudy_oldstyle-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'cardinal';
+  src: url('./fonts/cardinal/cardinal-webfont.woff2') format('woff2'),
+    url('./fonts/cardinal/cardinal-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.goudy {
+  font-family: "goudy", Georgia, 'Times New Roman', Times, serif;
+}
+
+.cardinal {
+  font-family: "cardinal", Georgia, 'Times New Roman', Times, serif
+}
+
+
+body {
+  background-color: #1c1a1a;
+  color: #efefef;
+  font-family: "goudy", Georgia, 'Times New Roman', Times, serif;
+}
+
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  max-width: 70ch;
+}
+
+
 
 /* ----------Base styles ---------  */
 
-:root {
-  --ratio: 1.5;
-  --s-5: calc(var(--s-4) / var(--ratio));
-  --s-4: calc(var(--s-3) / var(--ratio));
-  --s-3: calc(var(--s-2) / var(--ratio));
-  --s-2: calc(var(--s-1) / var(--ratio));
-  --s-1: calc(var(--s0) / var(--ratio));
-  --s0: 1rem;
-  --s1: calc(var(--s0) * var(--ratio));
-  --s2: calc(var(--s1) * var(--ratio));
-  --s3: calc(var(--s2) * var(--ratio));
-  --s4: calc(var(--s3) * var(--ratio));
-  --s5: calc(var(--s4) * var(--ratio));
-}
-
-body {
-  line-height: var(--ratio);
-  background-color: black;
-  color: white;
-}
 
 
-li {
-  list-style: none;
-}
+/* -------- Header & Banner ----------------- */
 
-.button {
-  padding: 0.25em 0.75em;
-  border: 2px solid white;
-  border-radius: 100px;
-  transition: 0.3s;
-  background-color: black;
-}
+/* --- On small screens this area is pretty sparse -- */
 
-.button:hover {
-  background-color: white;
-  color: black;
-  transition: 0.3s;
-}
-
-.spaced {
-  margin-top: var(--s2);
-}
-
-
-/* -------- Header ----------------- */
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  border-bottom: 2px solid white;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 5%;
-  padding: 2%;
-}
-
-.top-nav {
+header,
+.intro p,
+.intro__buttons {
   display: none;
 }
 
-.mobile-nav {
+
+
+/* -------- Banner section ----------------- */
+
+.intro {
+  margin-inline: auto;
+  padding-top: 5%;
+  width: 90%;
+  max-width: 1200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: 2px solid white;
-  background-color: black;
-  padding: 2%;
+  align-items: center;
+  gap: 1rem;
 }
 
-.logo {
-  width: 50px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
-}
-
-.nav-links {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 3%
-}
-
-.menu-link {
-  position: relative;
-}
-
-.menu-link::after {
-  content: "";
-  display: block;
-  height: 2px;
-  position: absolute;
-  width: 0;
-  background-color: white;
-  transition: 0.3s;
-}
-
-.menu-link:hover::after {
-  width: 100%;
-  transition: all linear 250ms;
-}
-
-
-
-/* -------- Main ----------------- */
-
-main {
-  margin-top: 6%;
-  border-bottom: 2px solid white;
-}
 
 h1 {
-  margin: 15% auto 3%;
+  margin-block: -10px;
+}
+
+.intro__text,
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro__text>div:first-of-type {
+  width: 30%;
+}
+
+.intro__text img {
+  max-width: 100%;
 }
 
 
@@ -342,14 +329,6 @@ h1 {
   background-color: rgba(0, 0, 0, 0.6)
 }
 
-/* --- Here's where I experiment with a carousel vs a grid container --  */
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-}
-
-/*
 .container {
   width: 90%;
   margin-inline: auto;
@@ -358,7 +337,6 @@ h1 {
   grid-gap: min(1vw, 2rem);
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
 }
-*/
 
 
 /* -------- News stories ---- */
@@ -388,49 +366,115 @@ h1 {
 
 footer {
   text-align: center;
-  margin-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 
 
 /* ------- Media Queries ---------- */
 
-/* Because I am obsessed with responsive design, there's not a lot to be done here.  I believe very strongly in letting the browser handle most of the work. */
 
+@media all and (min-width: 760px) {
 
-@media all and (min-width: 600px) {
-
-
-  /*  ----- Remove the mobile-only nav bar and instate the upper bar -------- */
 
   header {
-    padding: 1rem;
-    padding-right: 2%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid #cdcaca;
+    background-color: #1c1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    padding: 1% 2%;
   }
+
+  .logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  }
+
+  header .logo {
+    width: 50px;
+  }
+
 
   .top-nav {
     display: block;
     width: 80%;
   }
 
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 3%
+  }
+
   .top-nav .nav-links {
     justify-content: flex-end;
   }
 
-  .mobile-nav {
-    display: none;
+  .menu-link {
+    position: relative;
   }
 
-  /* --- Offset h1  */
+  .menu-link::after {
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    width: 0;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .menu-link:hover::after {
+    width: 100%;
+    transition: all linear 250ms;
+  }
+
+
+  /* ------  changes to intro section ------  */
+
+  .intro p {
+    display: block;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+  }
 
   h1 {
+    font-size: 4rem;
+  }
+
+  .intro {
     margin: auto;
+    margin-block: 5%;
   }
 
-  /* --- Remove footer spacing ---*/
-
-  footer {
-    margin-bottom: 0;
+  .intro__text {
+    justify-content: flex-end;
   }
+
+  .intro__text img {
+    max-width: 270px;
+  }
+
+  /* ---- Put logo next to title ------ */
+
+  .intro__text {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .intro__buttons {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    gap: 2rem;
+  }
+
 
 }

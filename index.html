@@ -18,25 +18,43 @@
       <ul class="nav-links">
         <li class="menu-link"><a href="#">Unsere Club</a></li>
         <li class="menu-link"><a href="#">News</a></li>
-        <li class="menu-link"><a href="#">Aktuelle</a></li>
         <li class="menu-link"><a href="#">Bildergallerie</a></li>
         <li class="menu-link"><a href="#">Kontakt</a></li>
       </ul>
     </nav>
-    <a href="#" class="button">Login</a>
+    <!-- <button type="button">Login</button> -->
   </header>
 
   <!-- The banner section.  "Main" is perhaps not the best tag for this part, so I might change it later.  Will need to take care to update some CSS rules if I do. -->
 
-  <main>
-    <h1><img src="./images/logos/logo_10.png" alt="Schwert & Feder Spielclub Düdingen"></h1>
-  </main>
+  <section class="intro">
+    <div class="intro__text">
+      <div>
+        <img src="./images/logos/logo_sf_textless_white.png" alt="Schwert & Feder logo">
+      </div>
+      <div class="title">
+        <p>Wilkommen auf</p>
+        <h1 class="cardinal">Schwert & Feder</h1>
+        <h2 class="cardinal">Spielclub Düdingen</h2>
+      </div>
+    </div>
+    <div>
+      <p>Unser Spielclub ist eine Plattform für alle Spielbegeisterten. DieTätigkeiten sind dabei vielfältig, der
+        Haupt-Fokus liegt jedoch in der Förderung des kreativen Spiels. Hierzu zählen insbesondere Pen &
+        Paper-Rollenspiele und Live-Rollenspiele sowie einfache bis sehr komplexe Brettspiele.</p>
+    </div>
+
+    <div class="intro__buttons">
+      <button type="button">Unsere Club</button>
+      <button type="button">Was ist Rollenspiele?</button>
+    </div>
+  </section>
 
 
   <!-- The "latest news" section.  Adding more news items will be as easy as copy/pasting the sections below and doing the same with the CSS bits.  Ultimately I'd like to put these into a slider. -->
 
   <section class="latest" aria-labelledby="letztens">
-    <h2 id="letztens">Letztens</h2>
+    <h4 id="letztens">Letztens</h4>
 
     <div class="container carousel">
 
@@ -72,22 +90,16 @@
 
 
   <section class="spaced" aria-labelledby="about">
-    <h2 id="about">Unser Club</h2>
-    <p></p>
+    <h4 id="about">Unser Club</h4>
+    <p>Der Verein Schwert & Feder, Spielclub Düdingen ist, wie der Name schon sagt, ein Spielclub.</p>
 
+    <p>Wir haben dabei den Begriff "Spiele" grosszügig definiert. Es ist ein Anliegen des Clubs das "kreative Spiel" zu
+      fördern.</p>
+
+    <p>Folgende Tätigkeiten werden (normale Schrift) oder wurden (kursive Schrift) im Club praktiziert (wobei man
+      anmerken muss, dass der Verein für jegliche Art von Spiel offen ist):</p>
   </section>
 
-
-  <!--- The navigation menu for mobile devices.  This will only appear on screen widths < 600px:  see the Media Queries/Swap Nav bars section in style.css -->
-
-  <nav aria-label="mobile-nav" class="mobile-nav">
-    <ul class="nav-links">
-      <li class="menu-link"><a href="#">News</a></li>
-      <li class="menu-link"><a href="#">Aktuelle</a></li>
-      <li class="menu-link"><a href="#">Gallerie</a></li>
-      <li class="menu-link"><a href="#">Kontakt</a></li>
-    </ul>
-  </nav>
 
   <!--- The footer.  It is very basic. -->
 
