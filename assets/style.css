@@ -382,7 +382,6 @@ footer {
 /* ------- Media Queries ---------- */
 
 
-
 @media all and (min-width: 770px) {
 
 
@@ -515,7 +514,7 @@ footer {
     margin-top: 1.5rem;
     display: grid;
     grid-gap: min(1vw, 2rem);
-    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 
 
