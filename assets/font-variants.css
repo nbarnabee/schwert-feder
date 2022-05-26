@@ -97,7 +97,7 @@
 
 
 @font-face {
-    font-family: 'cardinalregular';
+    font-family: 'cardinal';
     src: url('./fonts/cardinal/cardinal-webfont.woff2') format('woff2'),
         url('./fonts/cardinal/cardinal-webfont.woff') format('woff');
     font-weight: normal;
