@@ -338,7 +338,12 @@ h1 {
 }
 
 
-/* This is just the design for the card items themselves.  To add new items, copy/paste the relevant bits on index.html and add a new entry in the next section. */
+/* This is just the design for the news card items themselves.  To add new items, copy/paste the relevant bits on index.html and add a new entry in the next section. */
+
+
+.news {
+  border-bottom: 1px solid #efefef;
+}
 
 .news-header {
   aspect-ratio: 1.91 / 1;
@@ -386,26 +391,6 @@ h1 {
   background-repeat: no-repeat;
   margin-right: 1%;
 }
-
-
-
-/* ------  the original way that I'd done this ----------- */
-
-/* .hurloon {
-  background: url("../images/thumbnails/hurloon_thumb.jpg") center/contain no-repeat;
-}
-
-.suft21_kinder {
-  background: url("../images/thumbnails/suft21_kinder.jpg") center/contain no-repeat;
-}
-
-.suft21_draft {
-  background: url("../images/thumbnails/suft21_draft.jpg") center/contain no-repeat;
-}
-
-.magic_turnier {
-  background: url("../images/thumbnails/magic_turnier.jpg") center/contain no-repeat;
-} */
 
 
 /* ------  other sections (general) --------- */
@@ -564,6 +549,10 @@ footer {
     display: grid;
     grid-gap: min(2vw, 3rem);
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+
+  .news {
+    border-bottom: 0;
   }
 
 
