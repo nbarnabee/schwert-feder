@@ -217,6 +217,46 @@ html {
   font-style: normal;
 }
 
+.goudy {
+  font-family: "goudy", Georgia, 'Times New Roman', Times, serif;
+}
+
+@font-face {
+  font-family: 'goudy_italic';
+  src: url('./fonts/GoudyOldstyleItalic/goudy_oldstyle_italic-webfont.woff2') format('woff2'),
+    url('./fonts/GoudyOldstyleItalic/goudy_oldstyle_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.italic {
+  font-family: "goudy_italic", Georgia, 'Times New Roman', Times, serif;
+}
+
+@font-face {
+  font-family: 'goudy_sc';
+  src: url('./fonts/GoudyOldstyleSC/goudy_oldstyle_sc-webfont.woff2') format('woff2'),
+    url('./fonts/GoudyOldstyleSC/goudy_oldstyle_sc-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.small-caps {
+  font-family: "goudy_sc", Georgia, 'Times New Roman', Times, serif;
+}
+
+@font-face {
+  font-family: 'goudy_bold';
+  src: url('./fonts/GoudyOldStyleBold/goudy_old_style_bold-webfont.woff2') format('woff2'),
+    url('./fonts/GoudyOldStyleBold/goudy_old_style_bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bold {
+  font-family: "goudy_bold", Georgia, 'Times New Roman', Times, serif;
+}
+
 @font-face {
   font-family: 'cardinal';
   src: url('./fonts/cardinal/cardinal-webfont.woff2') format('woff2'),
@@ -225,9 +265,6 @@ html {
   font-style: normal;
 }
 
-.goudy {
-  font-family: "goudy", Georgia, 'Times New Roman', Times, serif;
-}
 
 .cardinal {
   font-family: "cardinal", Georgia, 'Times New Roman', Times, serif
@@ -267,6 +304,7 @@ p {
   display: inline-block;
   color: black;
   background-color: #efefef;
+  font-family: "goudy_bold", Georgia, 'Times New Roman', Times, serif;
   border-radius: 4px;
   padding: 0.4em 0.5em;
   transition: 0.2s;
@@ -451,7 +489,7 @@ footer {
     background-color: #1c1a1a;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     gap: 5%;
     padding: 1% 2%;
   }
@@ -467,7 +505,7 @@ footer {
 
   .top-nav {
     display: block;
-    width: 80%;
+    width: 100%;
   }
 
   .nav-links {
