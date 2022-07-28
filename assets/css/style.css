@@ -374,7 +374,7 @@ h1 {
       rgba(0, 0, 0, 0.3) 59%,
       rgba(0, 0, 0, 0.75) 100%
     ),
-    url("./../images/thumbnails/hurloon_thumb.jpg");
+    url("../../images/thumbnails/hurloon_thumb.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1%;
@@ -387,7 +387,7 @@ h1 {
       rgba(0, 0, 0, 0.3) 59%,
       rgba(0, 0, 0, 0.75) 100%
     ),
-    url("./../images/thumbnails/suft21_kinder.jpg");
+    url("../../images/thumbnails/suft21_kinder.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1%;
@@ -400,7 +400,7 @@ h1 {
       rgba(0, 0, 0, 0.3) 59%,
       rgba(0, 0, 0, 0.75) 100%
     ),
-    url("./../images/thumbnails/suft21_draft.jpg");
+    url("../../images/thumbnails/suft21_draft.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1%;
@@ -413,7 +413,7 @@ h1 {
       rgba(0, 0, 0, 0.3) 59%,
       rgba(0, 0, 0, 0.75) 100%
     ),
-    url("./../images/thumbnails/magic_turnier.jpg");
+    url("../../images/thumbnails/magic_turnier.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   margin-right: 1%;
