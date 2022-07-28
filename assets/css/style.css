@@ -1,208 +1,3 @@
-/* ---- A spicy combination of...
-
-  http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-
-and
-
-  Josh's Custom CSS Reset
-  https://www.joshwcomeau.com/css/custom-css-reset/
-
------------------------------------------------------  */
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-}
-
-img,
-picture,
-video,
-canvas {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-#root,
-#__next {
-  isolation: isolate;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
-/* * {
-  outline: 1px solid red;
-} */
-
-/* -----  Root ----------  */
-
-html {
-  scroll-behavior: smooth;
-}
 
 /* ------  Fonts ----------- */
 
@@ -273,12 +68,195 @@ html {
   font-family: "cardinal", Georgia, "Times New Roman", Times, serif;
 }
 
+/* -----  Custom Properties ----------  */
+
+:root {
+  --ff-fancy: font-family: "cardinal", Georgia, "Times New Roman", Times, serif;
+  --ff-body: font-family: "goudy", Georgia, "Times New Roman", Times, serif;
+  --ff-italic: font-family: "goudy_italic", Georgia, "Times New Roman", Times, serif;
+  --ff-bold: font-family: "goudy_bold", Georgia, "Times New Roman", Times, serif;
+
+  --shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 25%),
+  0.125em 0.125em 0.25em rgba(0, 0, 0, 15%);
+
+--s-xxl: 4rem;
+--s-xl: 2.25rem;
+--s-large: 1.875rem;
+--s-medium-large: 1.5rem;
+--s-medium: 1.25rem;
+--s-normal: 1rem;
+--s-small: 0.75rem;
+--s-xs: 0.5rem;
+}
+
+@media (min-width: 800px) {
+:root {
+  --s-xxl: 6rem;
+  --s-xl: 3rem;
+  --s-large: 2.25rem;
+  --s-medium: 1.5rem;
+  --s-normal: 1.125rem;
+  --s-small: 1rem;
+  --s-xs: 0.75rem;
+  }
+}
+
+
+/* ---Component definitions -- */
+
+.stack > * + * {
+  margin-block-start: var(--s-medium);
+}
+
+.stack-large > * + * {
+  margin-block-start: var(--s-xl);
+}
+
+.stack-small > * + * {
+  margin-block-end: var(--s-small);
+}
+
+.container-large {
+  width: 90%;
+  margin-inline: auto;
+  padding: var(--s-xl);
+}
+
+/* Smaller containers are expected to stack inside the .container-large element */
+.container-medium {
+  width: 100%;
+  padding: var(--s-medium);
+  max-width: 1200px;
+}
+
+
+/* -- General styles -- */
+
+
 body {
   background-color: #1c1a1a;
   color: #efefef;
-  font-family: "goudy", Georgia, "Times New Roman", Times, serif;
+  font-family: var(--ff-body);
+  font-size: var(--s-normal);
 }
 
+:focus {
+  outline: 3px solid red;
+  outline-offset: 3px;
+}
+
+p,
+q {
+  max-width: 70ch;
+}
+
+section {
+  padding: 3rem 0.5rem;
+}
+
+@media (min-width: 800px) {
+  section {
+    padding-inline: 3rem;
+  }
+}
+
+
+/* ---- Fonts and typography ------ */
+
+/* -- Typography -- */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  font-family: var(--ff-fancy);
+}
+
+h1 {
+  font-size: var(--s-xxl);
+  letter-spacing: -0.015em;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: var(--s-xl);
+}
+
+h3,
+body {
+  font-size: var(--s-medium);
+}
+
+small {
+  font-size: var(--s-small);
+}
+
+.heading-reduced {
+  font-size: var(--s-large);
+}
+
+.text-medium {
+  font-size: var(--s-medium);
+}
+
+/* -- General component styling -- */
+
+/*  Buttons and button-like objects */
+
+.btn {
+  border: 0;
+  display: inline-block;
+  height: auto;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-family: var(--ff-header);
+  font-size: var(--s-normal);
+}
+
+.btn-outline {
+  border: 2px solid var(--neutral-dark);
+  padding: 0.5rem 1rem;
+  margin-block: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary-main);
+  color: var(--neutral-lightest);
+}
+
+.btn-dark {
+  background: var(--neutral-darkest);
+  color: var(--neutral-lightest);
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.btn-group {
+  display: flex;
+  margin-block: 1rem;
+  gap: 1rem;
+}
+
+/*----- Functional classes ---- */
+
+.hidden-small-screen {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .hidden-small-screen {
+    display: block;
+  }
+}
+/* 
 h1 {
   font-size: 3.2rem;
 }
@@ -295,7 +273,7 @@ h4 {
 p {
   font-size: 1.2rem;
   max-width: 70ch;
-}
+} */
 
 /* ----------Base styles ---------  */
 
@@ -463,13 +441,13 @@ footer {
 @media all and (min-width: 770px) {
   /* ------ fonts for big screens ------- */
 
-  h1 {
+  /* h1 {
     font-size: 5rem;
   }
 
   h2 {
     font-size: 3rem;
-  }
+  } */
 
   a,
   button {
@@ -540,7 +518,7 @@ footer {
 
   /* ------  changes to intro section ------  */
 
-  main {
+  /* main {
     background-image: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.3) 0%,
@@ -551,16 +529,16 @@ footer {
     background-repeat: no-repeat;
     padding-bottom: 2em;
     background-position: 50% 30%;
-  }
+  } */
 
   .intro p {
     display: block;
     padding-bottom: 10px;
   }
 
-  h1 {
+  /* h1 {
     font-size: 4rem;
-  }
+  } */
 
   .intro {
     margin: auto;
